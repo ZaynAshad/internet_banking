@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Internet Banking - Settings</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="bank-app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="bank-sidebar">
+
+
+        <div class="bank-brand">
+
+            <div class="bank-logo">
+                ◆
+            </div>
+
+            <div>
+
+                <strong>
+                    INTERNET
+                </strong>
+
+                <span>
+                    BANKING
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="bank-navigation">
+
+
+            <a href="dashboard.html">
+
+                <span>⌂</span>
+                Dashboard
+
+            </a>
+
+
+            <a href="accounts.html">
+
+                <span>▣</span>
+                Accounts
+
+            </a>
+
+
+            <a href="transfer.html">
+
+                <span>↗</span>
+                Transfer
+
+            </a>
+
+
+            <a href="withdraw.html">
+
+                <span>↙</span>
+                Withdraw
+
+            </a>
+
+
+            <a href="transactions.html">
+
+                <span>≡</span>
+                Transactions
+
+            </a>
+
+
+            <a href="profile.html">
+
+                <span>○</span>
+                Profile
+
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="active">
+
+                <span>⚙</span>
+                Settings
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="logout.html">
+
+                <span>↪</span>
+                Sign Out
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="bank-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="bank-topbar">
+
+
+            <div>
+
+                <p class="bank-eyebrow">
+                    ACCOUNT PREFERENCES
+                </p>
+
+                <h1>
+                    Settings
+                </h1>
+
+            </div>
+
+
+            <div class="bank-user">
+
+                <div>
+
+                    <strong>
+                        Sandra Conner
+                    </strong>
+
+                    <small>
+                        Account Holder
+                    </small>
+
+                </div>
+
+
+                <div class="bank-avatar">
+                    SC
+                </div>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- SETTINGS GRID -->
+
+        <section class="settings-layout">
+
+
+            <!-- ACCOUNT PREFERENCES -->
+
+            <div class="settings-card">
+
+
+                <div class="settings-heading">
+
+
+                    <div>
+
+                        <p>
+                            ACCOUNT PREFERENCES
+                        </p>
+
+                        <h2>
+                            General
+                        </h2>
+
+                    </div>
+
+
+                    <div class="settings-icon">
+                        ⚙
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="settings-fields">
+
+
+                    <div class="bank-field">
+
+
+                        <label for="currency">
+                            Default Currency
+                        </label>
+
+
+                        <select id="currency">
+
+
+                            <option>
+                                USD — United States Dollar
+                            </option>
+
+
+                            <option>
+                                GBP — British Pound
+                            </option>
+
+
+                            <option>
+                                EUR — Euro
+                            </option>
+
+
+                            <option>
+                                AED — UAE Dirham
+                            </option>
+
+
+                            <option>
+                                SAR — Saudi Riyal
+                            </option>
+
+
+                            <option>
+                                NOK — Norwegian Krone
+                            </option>
+
+
+                            <option>
+                                CAD — Canadian Dollar
+                            </option>
+
+
+                            <option>
+                                CHF — Swiss Franc
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="language">
+                            Language
+                        </label>
+
+
+                        <select id="language">
+
+
+                            <option>
+                                English
+                            </option>
+
+
+                            <option>
+                                French
+                            </option>
+
+
+                            <option>
+                                German
+                            </option>
+
+
+                            <option>
+                                Spanish
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="timezone">
+                            Time Zone
+                        </label>
+
+
+                        <select id="timezone">
+
+
+                            <option>
+                                Eastern Time (ET)
+                            </option>
+
+
+                            <option>
+                                Central Time (CT)
+                            </option>
+
+
+                            <option>
+                                Mountain Time (MT)
+                            </option>
+
+
+                            <option>
+                                Pacific Time (PT)
+                            </option>
+
+
+                            <option>
+                                Greenwich Mean Time (GMT)
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="dateFormat">
+                            Date Format
+                        </label>
+
+
+                        <select id="dateFormat">
+
+
+                            <option>
+                                DD MMM YYYY
+                            </option>
+
+
+                            <option>
+                                MM/DD/YYYY
+                            </option>
+
+
+                            <option>
+                                YYYY-MM-DD
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SECURITY -->
+
+            <div class="settings-card">
+
+
+                <div class="settings-heading">
+
+
+                    <div>
+
+                        <p>
+                            ACCOUNT SECURITY
+                        </p>
+
+                        <h2>
+                            Security
+                        </h2>
+
+                    </div>
+
+
+                    <div class="settings-icon">
+                        ✓
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="settings-option-list">
+
+
+                    <div class="settings-option">
+
+
+                        <div class="settings-option-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Two-factor authentication
+                            </strong>
+
+                            <span>
+                                Additional verification for account access
+                            </span>
+
+                        </div>
+
+
+                        <label class="switch">
+
+
+                            <input
+                                type="checkbox"
+                                checked>
+
+
+                            <span class="slider"></span>
+
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <div class="settings-option">
+
+
+                        <div class="settings-option-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Login notifications
+                            </strong>
+
+                            <span>
+                                Alerts when your account is accessed
+                            </span>
+
+                        </div>
+
+
+                        <label class="switch">
+
+
+                            <input
+                                type="checkbox"
+                                checked>
+
+
+                            <span class="slider"></span>
+
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <div class="settings-option">
+
+
+                        <div class="settings-option-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Transaction notifications
+                            </strong>
+
+                            <span>
+                                Alerts for account activity
+                            </span>
+
+                        </div>
+
+
+                        <label class="switch">
+
+
+                            <input
+                                type="checkbox"
+                                checked>
+
+
+                            <span class="slider"></span>
+
+
+                        </label>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- DISPLAY -->
+
+            <div class="settings-card">
+
+
+                <div class="settings-heading">
+
+
+                    <div>
+
+                        <p>
+                            INTERFACE
+                        </p>
+
+                        <h2>
+                            Display
+                        </h2>
+
+                    </div>
+
+
+                    <div class="settings-icon">
+                        ◐
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="settings-fields">
+
+
+                    <div class="bank-field">
+
+
+                        <label for="theme">
+                            Interface Theme
+                        </label>
+
+
+                        <select id="theme">
+
+
+                            <option>
+                                Light
+                            </option>
+
+
+                            <option>
+                                Dark
+                            </option>
+
+
+                            <option>
+                                System Default
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="density">
+                            Display Density
+                        </label>
+
+
+                        <select id="density">
+
+
+                            <option>
+                                Comfortable
+                            </option>
+
+
+                            <option>
+                                Compact
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ACCOUNT INFORMATION -->
+
+            <div class="settings-card">
+
+
+                <div class="settings-heading">
+
+
+                    <div>
+
+                        <p>
+                            ACCOUNT INFORMATION
+                        </p>
+
+                        <h2>
+                            Account
+                        </h2>
+
+                    </div>
+
+
+                    <div class="settings-icon">
+                        ▣
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="account-detail-list">
+
+
+                    <div class="account-detail-row">
+
+                        <span>
+                            Account Holder
+                        </span>
+
+                        <strong>
+                            Sandra Conner
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="account-detail-row">
+
+                        <span>
+                            Primary Account
+                        </span>
+
+                        <strong>
+                            USD •••• 4821
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="account-detail-row">
+
+                        <span>
+                            Account Type
+                        </span>
+
+                        <strong>
+                            Personal / Business Banking
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="account-detail-row">
+
+                        <span>
+                            Member Since
+                        </span>
+
+                        <strong>
+                            2016
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="account-detail-row">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong class="active-text">
+                            Active
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="settings-actions">
+
+
+            <button
+                type="button"
+                id="saveSettings"
+                class="bank-primary-button">
+
+                Save Settings
+
+                <span>
+                    ✓
+                </span>
+
+            </button>
+
+
+            <a
+                href="dashboard.html"
+                class="bank-secondary-button">
+
+                Cancel
+
+            </a>
+
+
+        </div>
+
+
+
+        <footer class="bank-footer">
+
+            <span>
+                Internet Banking
+            </span>
+
+            <span>
+                Account ending 4821
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+const saveSettings =
+    document.getElementById(
+        "saveSettings"
+    );
+
+
+saveSettings.addEventListener(
+    "click",
+    function () {
+
+        alert(
+            "Settings have been updated."
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

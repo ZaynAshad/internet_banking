@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Internet Banking - Transactions</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="bank-app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="bank-sidebar">
+
+
+        <div class="bank-brand">
+
+            <div class="bank-logo">
+                ◆
+            </div>
+
+            <div>
+
+                <strong>
+                    INTERNET
+                </strong>
+
+                <span>
+                    BANKING
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="bank-navigation">
+
+
+            <a href="dashboard.html">
+
+                <span>⌂</span>
+                Dashboard
+
+            </a>
+
+
+            <a href="accounts.html">
+
+                <span>▣</span>
+                Accounts
+
+            </a>
+
+
+            <a href="transfer.html">
+
+                <span>↗</span>
+                Transfer
+
+            </a>
+
+
+            <a href="withdraw.html">
+
+                <span>↙</span>
+                Withdraw
+
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="active">
+
+                <span>≡</span>
+                Transactions
+
+            </a>
+
+
+            <a href="profile.html">
+
+                <span>○</span>
+                Profile
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <span>⚙</span>
+                Settings
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="logout.html">
+
+                <span>↪</span>
+                Sign Out
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="bank-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="bank-topbar">
+
+
+            <div>
+
+                <p class="bank-eyebrow">
+                    ACCOUNT ACTIVITY
+                </p>
+
+                <h1>
+                    Transactions
+                </h1>
+
+            </div>
+
+
+            <div class="bank-user">
+
+                <div>
+
+                    <strong>
+                        Sandra M. Conner
+                    </strong>
+
+                    <small>
+                        Account Holder
+                    </small>
+
+                </div>
+
+
+                <div class="bank-avatar">
+                    SC
+                </div>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- SUMMARY -->
+
+        <section class="transaction-summary">
+
+
+            <div class="transaction-summary-card">
+
+                <span>
+                    CURRENT BALANCE
+                </span>
+
+                <strong>
+                    $2,750,000.00
+                </strong>
+
+                <small>
+                    USD •••• 4821
+                </small>
+
+            </div>
+
+
+            <div class="transaction-summary-card">
+
+                <span>
+                    CREDITS
+                </span>
+
+                <strong class="credit-text">
+                    +$805,000.00
+                </strong>
+
+                <small>
+                    This period
+                </small>
+
+            </div>
+
+
+            <div class="transaction-summary-card">
+
+                <span>
+                    DEBITS
+                </span>
+
+                <strong class="debit-text">
+                    -$415,000.00
+                </strong>
+
+                <small>
+                    This period
+                </small>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- FILTERS -->
+
+        <section class="transaction-controls">
+
+
+            <div class="transaction-search">
+
+
+                <span>
+                    ⌕
+                </span>
+
+
+                <input
+                    id="transactionSearch"
+                    type="search"
+                    placeholder="Search transactions...">
+
+
+            </div>
+
+
+
+            <select id="transactionType">
+
+
+                <option value="">
+                    All types
+                </option>
+
+
+                <option value="credit">
+                    Credits
+                </option>
+
+
+                <option value="debit">
+                    Debits
+                </option>
+
+
+            </select>
+
+
+
+            <select id="transactionYear">
+
+
+                <option value="">
+                    All years
+                </option>
+
+
+                <option value="2026">
+                    2026
+                </option>
+
+
+                <option value="2025">
+                    2025
+                </option>
+
+
+                <option value="2024">
+                    2024
+                </option>
+
+
+                <option value="2023">
+                    2023
+                </option>
+
+
+                <option value="2022">
+                    2022
+                </option>
+
+
+            </select>
+
+
+        </section>
+
+
+
+        <!-- TRANSACTION TABLE -->
+
+        <section class="transaction-table-card">
+
+
+            <div class="transaction-table-header">
+
+
+                <div>
+
+                    <p>
+                        TRANSACTION HISTORY
+                    </p>
+
+                    <h2>
+                        Recent Activity
+                    </h2>
+
+                </div>
+
+
+                <span>
+                    USD Account •••• 4821
+                </span>
+
+
+            </div>
+
+
+
+            <div class="transaction-table-wrap">
+
+
+                <table id="transactionsTable">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                DATE
+                            </th>
+
+                            <th>
+                                DESCRIPTION
+                            </th>
+
+                            <th>
+                                LOCATION
+                            </th>
+
+                            <th>
+                                TYPE
+                            </th>
+
+                            <th>
+                                AMOUNT
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr
+                            data-type="credit"
+                            data-year="2026">
+
+
+                            <td>
+                                13 Aug 2026
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    Energy Services Contract
+                                </strong>
+
+                                <small>
+                                    REF-784521
+                                </small>
+
+                            </td>
+
+
+                            <td>
+                                Houston, USA
+                            </td>
+
+
+                            <td>
+
+                                <span class="type-badge credit-badge">
+                                    Credit
+                                </span>
+
+                            </td>
+
+
+                            <td class="credit-text">
+                                +$485,000.00
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+
+                        <tr
+                            data-type="debit"
+                            data-year="2026">
+
+
+                            <td>
+                                02 Aug 2026
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    Offshore Operations Payment
+                                </strong>
+
+                                <small>
+                                    REF-628415
+                                </small>
+
+                            </td>
+
+
+                            <td>
+                                Dubai, UAE
+                            </td>
+
+
+                            <td>
+
+                                <span class="type-badge debit-badge">
+                                    Debit
+                                </span>
+
+                            </td>
+
+
+                            <td class="debit-text">
+                                -$178,500.00
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+
+                        <tr
+                            data-type="credit"
+                            data-year="2026">
+
+
+                            <td>
+                                18 Jul 2026
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    Corporate Investment Return
+                                </strong>
+
+                                <small>
+                                    REF-517392
+                                </small>
+
+                            </td>
+
+
+                            <td>
+                                London, UK
+                            </td>
+
+
+                            <td>
+
+                                <span class="type-badge credit-badge">
+                                    Credit
+                                </span>
+
+                            </td>
+
+
+                            <td class="credit-text">
+                                +$320,000.00
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+
+                        <tr
+                            data-type="debit"
+                            data-year="2026">
+
+
+                            <td>
+                                04 Jun 2026
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    Marine Logistics Contract
+                                </strong>
+
+                                <small>
+                                    REF-409271
+                                </small>
+
+                            </td>
+
+
+                            <td>
+                                Oslo, Norway
+                            </td>
+
+
+                            <td>
+
+                                <span class="type-badge debit-badge">
+                                    Debit
+                                </span>
+
+                            </td>
+
+
+                            <td class="debit-text">
+                                -$236,500.00
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+
+                        <tr
+                            data-type="credit"
+                            data-year="2025">
+
+
+                            <td>
+                                21 Nov 2025
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    Consulting Services
+                                </strong>
+
+                                <small>
+                                    REF-385214
+                                </small>
+
+                            </td>
+
+
+                            <td>
+                                New York, USA
+                            </td>
+
+
+                            <td>
+
+                                <span class="type-badge credit-badge">
+                                    Credit
+                                </span>
+
+                            </td>
+
+
+                            <td class="credit-text">
+                                +$155,000.00
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+
+                        <tr
+                            data-type="debit"
+                            data-year="2025">
+
+
+                            <td>
+                                09 Sep 2025
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    Equipment Procurement
+                                </strong>
+
+                                <small>
+                                    REF-294816
+                                </small>
+
+                            </td>
+
+
+                            <td>
+                                Hamburg, Germany
+                            </td>
+
+
+                            <td>
+
+                                <span class="type-badge debit-badge">
+                                    Debit
+                                </span>
+
+                            </td>
+
+
+                            <td class="debit-text">
+                                -$92,000.00
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+
+                        <tr
+                            data-type="credit"
+                            data-year="2024">
+
+
+                            <td>
+                                17 May 2024
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    Energy Consulting
+                                </strong>
+
+                                <small>
+                                    REF-183745
+                                </small>
+
+                            </td>
+
+
+                            <td>
+                                Calgary, Canada
+                            </td>
+
+
+                            <td>
+
+                                <span class="type-badge credit-badge">
+                                    Credit
+                                </span>
+
+                            </td>
+
+
+                            <td class="credit-text">
+                                +$275,000.00
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge">
+                                    Completed
+                                </span>
+
+                            </td>
+
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <footer class="bank-footer">
+
+            <span>
+                Internet Banking
+            </span>
+
+            <span>
+                Account ending 4821
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+
+const searchInput =
+    document.getElementById(
+        "transactionSearch"
+    );
+
+
+const typeFilter =
+    document.getElementById(
+        "transactionType"
+    );
+
+
+const yearFilter =
+    document.getElementById(
+        "transactionYear"
+    );
+
+
+const rows =
+    document.querySelectorAll(
+        "#transactionsTable tbody tr"
+    );
+
+
+
+function filterTransactions() {
+
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+
+    const type =
+        typeFilter.value;
+
+
+    const year =
+        yearFilter.value;
+
+
+
+    rows.forEach(function(row) {
+
+
+        const text =
+            row.textContent
+                .toLowerCase();
+
+
+        const rowType =
+            row.dataset.type;
+
+
+        const rowYear =
+            row.dataset.year;
+
+
+        const matchesSearch =
+            !search ||
+            text.includes(search);
+
+
+        const matchesType =
+            !type ||
+            rowType === type;
+
+
+        const matchesYear =
+            !year ||
+            rowYear === year;
+
+
+
+        if (
+            matchesSearch &&
+            matchesType &&
+            matchesYear
+        ) {
+
+            row.style.display = "";
+
+        } else {
+
+            row.style.display = "none";
+
+        }
+
+
+    });
+
+
+}
+
+
+
+searchInput.addEventListener(
+    "input",
+    filterTransactions
+);
+
+
+typeFilter.addEventListener(
+    "change",
+    filterTransactions
+);
+
+
+yearFilter.addEventListener(
+    "change",
+    filterTransactions
+);
+
+
+</script>
+
+
+</body>
+
+</html>

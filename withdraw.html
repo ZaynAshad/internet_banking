@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Internet Banking - Withdraw</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="bank-app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="bank-sidebar">
+
+
+        <div class="bank-brand">
+
+            <div class="bank-logo">
+                ◆
+            </div>
+
+            <div>
+
+                <strong>
+                    INTERNET
+                </strong>
+
+                <span>
+                    BANKING
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="bank-navigation">
+
+
+            <a href="dashboard.html">
+
+                <span>⌂</span>
+                Dashboard
+
+            </a>
+
+
+            <a href="accounts.html">
+
+                <span>▣</span>
+                Accounts
+
+            </a>
+
+
+            <a href="transfer.html">
+
+                <span>↗</span>
+                Transfer
+
+            </a>
+
+
+            <a
+                href="withdraw.html"
+                class="active">
+
+                <span>↙</span>
+                Withdraw
+
+            </a>
+
+
+            <a href="transactions.html">
+
+                <span>≡</span>
+                Transactions
+
+            </a>
+
+
+            <a href="profile.html">
+
+                <span>○</span>
+                Profile
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <span>⚙</span>
+                Settings
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="logout.html">
+
+                <span>↪</span>
+                Sign Out
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="bank-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="bank-topbar">
+
+
+            <div>
+
+                <p class="bank-eyebrow">
+                    ACCOUNT WITHDRAWAL
+                </p>
+
+                <h1>
+                    Withdraw
+                </h1>
+
+            </div>
+
+
+            <div class="bank-user">
+
+                <div>
+
+                    <strong>
+                        Sandra Conner
+                    </strong>
+
+                    <small>
+                        Account Holder
+                    </small>
+
+                </div>
+
+
+                <div class="bank-avatar">
+                    SC
+                </div>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- WITHDRAWAL -->
+
+        <section class="transfer-layout">
+
+
+            <!-- FORM -->
+
+            <div class="transfer-form-card">
+
+
+                <div class="form-card-heading">
+
+
+                    <div>
+
+                        <p>
+                            NEW WITHDRAWAL
+                        </p>
+
+                        <h2>
+                            Withdraw funds
+                        </h2>
+
+                    </div>
+
+
+                    <div class="form-heading-icon">
+                        ↙
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SOURCE ACCOUNT -->
+
+                <div class="bank-form-section">
+
+
+                    <div class="bank-form-title">
+                        From account
+                    </div>
+
+
+                    <div class="bank-field">
+
+
+                        <label for="fromAccount">
+                            Account
+                        </label>
+
+
+                        <select id="fromAccount">
+
+
+                            <option>
+                                USD •••• 4821 — $2,750,000.00
+                            </option>
+
+
+                            <option>
+                                USD •••• 7392 — $1,250,000.00
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- AMOUNT -->
+
+                <div class="bank-form-section">
+
+
+                    <div class="bank-form-title">
+                        Withdrawal amount
+                    </div>
+
+
+                    <div class="bank-field">
+
+
+                        <label for="currency">
+                            Currency
+                        </label>
+
+
+                        <select id="currency">
+
+
+                            <option>
+                                USD — United States Dollar
+                            </option>
+
+
+                            <option>
+                                GBP — British Pound
+                            </option>
+
+
+                            <option>
+                                EUR — Euro
+                            </option>
+
+
+                            <option>
+                                AED — UAE Dirham
+                            </option>
+
+
+                            <option>
+                                SAR — Saudi Riyal
+                            </option>
+
+
+                            <option>
+                                NOK — Norwegian Krone
+                            </option>
+
+
+                            <option>
+                                CAD — Canadian Dollar
+                            </option>
+
+
+                            <option>
+                                CHF — Swiss Franc
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="amount">
+                            Amount
+                        </label>
+
+
+                        <input
+                            id="amount"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            placeholder="Enter amount">
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DESTINATION -->
+
+                <div class="bank-form-section">
+
+
+                    <div class="bank-form-title">
+                        Destination
+                    </div>
+
+
+                    <div class="bank-field">
+
+
+                        <label for="recipientName">
+                            Account holder name
+                        </label>
+
+
+                        <input
+                            id="recipientName"
+                            type="text"
+                            placeholder="Enter account holder name">
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="accountNumber">
+                            Account number
+                        </label>
+
+
+                        <input
+                            id="accountNumber"
+                            type="text"
+                            placeholder="Enter account number">
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="bankName">
+                            Bank name
+                        </label>
+
+
+                        <input
+                            id="bankName"
+                            type="text"
+                            placeholder="Enter bank name">
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="country">
+                            Country
+                        </label>
+
+
+                        <select id="country">
+
+
+                            <option value="">
+                                Select country
+                            </option>
+
+
+                            <option>
+                                United States
+                            </option>
+
+
+                            <option>
+                                United Kingdom
+                            </option>
+
+
+                            <option>
+                                United Arab Emirates
+                            </option>
+
+
+                            <option>
+                                Saudi Arabia
+                            </option>
+
+
+                            <option>
+                                Norway
+                            </option>
+
+
+                            <option>
+                                Canada
+                            </option>
+
+
+                            <option>
+                                Switzerland
+                            </option>
+
+
+                            <option>
+                                Germany
+                            </option>
+
+
+                            <option>
+                                France
+                            </option>
+
+
+                            <option>
+                                Singapore
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="two-fields">
+
+
+                        <div class="bank-field">
+
+
+                            <label for="city">
+                                City
+                            </label>
+
+
+                            <input
+                                id="city"
+                                type="text"
+                                placeholder="City">
+
+
+                        </div>
+
+
+
+                        <div class="bank-field">
+
+
+                            <label for="swift">
+                                SWIFT / BIC
+                            </label>
+
+
+                            <input
+                                id="swift"
+                                type="text"
+                                placeholder="SWIFT / BIC">
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- WITHDRAWAL DETAILS -->
+
+                <div class="bank-form-section">
+
+
+                    <div class="bank-form-title">
+                        Withdrawal details
+                    </div>
+
+
+                    <div class="bank-field">
+
+
+                        <label for="purpose">
+                            Purpose
+                        </label>
+
+
+                        <select id="purpose">
+
+
+                            <option>
+                                Business Operations
+                            </option>
+
+
+                            <option>
+                                Investment
+                            </option>
+
+
+                            <option>
+                                Contract Settlement
+                            </option>
+
+
+                            <option>
+                                Equipment
+                            </option>
+
+
+                            <option>
+                                Personal Withdrawal
+                            </option>
+
+
+                            <option>
+                                Other
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="bank-field">
+
+
+                        <label for="reference">
+                            Reference
+                        </label>
+
+
+                        <input
+                            id="reference"
+                            type="text"
+                            placeholder="Optional reference">
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ACTIONS -->
+
+                <div class="transfer-actions">
+
+
+                    <button
+                        type="button"
+                        id="continueWithdrawal"
+                        class="bank-primary-button">
+
+
+                        Continue
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                    </button>
+
+
+                    <a
+                        href="dashboard.html"
+                        class="bank-secondary-button">
+
+                        Cancel
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SIDE INFORMATION -->
+
+            <aside class="transfer-side">
+
+
+                <div class="side-info-card">
+
+
+                    <div class="side-icon">
+                        ◆
+                    </div>
+
+
+                    <p class="bank-eyebrow">
+                        WITHDRAWAL INFORMATION
+                    </p>
+
+
+                    <h3>
+                        Review your details carefully
+                    </h3>
+
+
+                    <p>
+                        Confirm the withdrawal amount,
+                        destination and account details
+                        before continuing.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="side-info-card">
+
+
+                    <p class="bank-eyebrow">
+                        SOURCE ACCOUNT
+                    </p>
+
+
+                    <h3>
+                        USD •••• 4821
+                    </h3>
+
+
+                    <strong class="side-balance">
+                        $2,750,000.00
+                    </strong>
+
+
+                    <span>
+                        Available balance
+                    </span>
+
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+
+        <footer class="bank-footer">
+
+
+            <span>
+                Internet Banking
+            </span>
+
+
+            <span>
+                Account ending 4821
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+const continueWithdrawal =
+    document.getElementById(
+        "continueWithdrawal"
+    );
+
+
+continueWithdrawal.addEventListener(
+    "click",
+    function () {
+
+
+        const amount =
+            document.getElementById(
+                "amount"
+            ).value.trim();
+
+
+        const recipient =
+            document.getElementById(
+                "recipientName"
+            ).value.trim();
+
+
+        const accountNumber =
+            document.getElementById(
+                "accountNumber"
+            ).value.trim();
+
+
+        const bankName =
+            document.getElementById(
+                "bankName"
+            ).value.trim();
+
+
+        const country =
+            document.getElementById(
+                "country"
+            ).value;
+
+
+        if (
+            !amount ||
+            Number(amount) <= 0 ||
+            !recipient ||
+            !accountNumber ||
+            !bankName ||
+            !country
+        ) {
+
+
+            alert(
+                "Please complete the required withdrawal information."
+            );
+
+
+            return;
+
+        }
+
+
+        window.location.href =
+            "cot.html";
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

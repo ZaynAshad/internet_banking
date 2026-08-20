@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Internet Banking - Sign In
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+<main class="bank-login">
+
+
+    <!-- LEFT SIDE -->
+
+    <section class="login-image">
+
+
+        <div class="image-overlay"></div>
+
+
+        <div class="image-content">
+
+
+            <div class="brand">
+
+                INTERNET
+
+                <span>
+                    BANKING
+                </span>
+
+            </div>
+
+
+
+            <div class="image-text">
+
+
+                <p class="eyebrow">
+                    SECURE ONLINE BANKING
+                </p>
+
+
+                <h1>
+
+                    Your finances.<br>
+                    Your future.
+
+                </h1>
+
+
+                <p>
+
+                    Access your accounts, transfers and
+                    banking activity from one secure
+                    banking portal.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- LOGIN PANEL -->
+
+    <section class="login-panel">
+
+
+        <div class="login-container">
+
+
+            <div class="mobile-brand">
+
+                INTERNET
+
+                <span>
+                    BANKING
+                </span>
+
+            </div>
+
+
+
+            <div class="login-heading">
+
+
+                <p class="eyebrow">
+                    WELCOME BACK
+                </p>
+
+
+                <h2>
+
+                    Sign in to your account
+
+                </h2>
+
+
+                <p>
+
+                    Access your secure online banking account.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- LOGIN FORM -->
+
+            <form
+                id="loginForm"
+                class="login-form">
+
+
+                <!-- USERNAME -->
+
+                <div class="form-group">
+
+
+                    <label for="username">
+
+                        Username
+
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+
+                        <span class="input-icon">
+                            👤
+                        </span>
+
+
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+
+                    <div class="password-header">
+
+
+                        <label for="password">
+
+                            Password
+
+                        </label>
+
+
+                        <a href="#">
+
+                            Forgot password?
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <div class="input-wrapper">
+
+
+                        <span class="input-icon">
+                            🔒
+                        </span>
+
+
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword()">
+
+                            Show
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- REMEMBER -->
+
+                <div class="remember-row">
+
+
+                    <label class="remember">
+
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe">
+
+
+                        <span>
+
+                            Remember me
+
+                        </span>
+
+
+                    </label>
+
+
+                </div>
+
+
+
+                <!-- ERROR MESSAGE -->
+
+                <div
+                    id="loginMessage"
+                    style="
+                        display:none;
+                        margin-bottom:18px;
+                        padding:12px 14px;
+                        border-radius:8px;
+                        background:#fff0f1;
+                        color:#c53d4b;
+                        font-size:12px;
+                        border:1px solid #ffd9dd;
+                    ">
+
+                    Incorrect username or password.
+
+                </div>
+
+
+
+                <!-- SIGN IN -->
+
+                <button
+                    type="submit"
+                    class="login-button">
+
+                    Sign In
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- SECURITY -->
+
+            <div class="security-message">
+
+
+                <div class="security-icon">
+
+                    ✓
+
+                </div>
+
+
+                <div>
+
+
+                    <strong>
+
+                        Secure connection
+
+                    </strong>
+
+
+                    <p>
+
+                        Your information is protected
+                        with an encrypted connection.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <div class="login-footer">
+
+
+                <p>
+
+                    © 2026 Internet Banking
+
+                </p>
+
+
+                <div>
+
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+
+                    <a href="#">
+                        Security
+                    </a>
+
+
+                    <a href="#">
+                        Help
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script>
+
+
+/* ================================
+   PROJECT LOGIN CREDENTIALS
+================================ */
+
+
+const DEMO_USERNAME =
+    "teacher";
+
+
+const DEMO_PASSWORD =
+    "IB2026!Teacher";
+
+
+
+/* ================================
+   LOGIN
+================================ */
+
+
+document
+    .getElementById("loginForm")
+    .addEventListener(
+        "submit",
+        function (event) {
+
+
+            event.preventDefault();
+
+
+
+            const username =
+                document
+                    .getElementById("username")
+                    .value
+                    .trim();
+
+
+
+            const password =
+                document
+                    .getElementById("password")
+                    .value;
+
+
+
+            const message =
+                document
+                    .getElementById("loginMessage");
+
+
+
+            /* CHECK CREDENTIALS */
+
+            if (
+                username === DEMO_USERNAME &&
+                password === DEMO_PASSWORD
+            ) {
+
+
+                sessionStorage.setItem(
+                    "internetBankingSignedIn",
+                    "1"
+                );
+
+
+                /* OPEN DASHBOARD */
+
+                window.location.href =
+                    "dashboard.html";
+
+
+            } else {
+
+
+                /* SHOW ERROR */
+
+                message.style.display =
+                    "block";
+
+
+            }
+
+
+        }
+    );
+
+
+
+/* ================================
+   SHOW / HIDE PASSWORD
+================================ */
+
+
+function togglePassword() {
+
+
+    const password =
+        document.getElementById(
+            "password"
+        );
+
+
+    const button =
+        document.querySelector(
+            ".show-password"
+        );
+
+
+
+    if (
+        password.type ===
+        "password"
+    ) {
+
+
+        password.type =
+            "text";
+
+
+        button.textContent =
+            "Hide";
+
+
+    } else {
+
+
+        password.type =
+            "password";
+
+
+        button.textContent =
+            "Show";
+
+
+    }
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Internet Banking - Verification</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="bank-app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="bank-sidebar">
+
+
+        <div class="bank-brand">
+
+            <div class="bank-logo">
+                ◆
+            </div>
+
+            <div>
+
+                <strong>
+                    INTERNET
+                </strong>
+
+                <span>
+                    BANKING
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="bank-navigation">
+
+
+            <a href="dashboard.html">
+
+                <span>⌂</span>
+                Dashboard
+
+            </a>
+
+
+            <a href="accounts.html">
+
+                <span>▣</span>
+                Accounts
+
+            </a>
+
+
+            <a href="transfer.html">
+
+                <span>↗</span>
+                Transfer
+
+            </a>
+
+
+            <a href="withdraw.html">
+
+                <span>↙</span>
+                Withdraw
+
+            </a>
+
+
+            <a href="transactions.html">
+
+                <span>≡</span>
+                Transactions
+
+            </a>
+
+
+            <a href="profile.html">
+
+                <span>○</span>
+                Profile
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <span>⚙</span>
+                Settings
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="logout.html">
+
+                <span>↪</span>
+                Sign Out
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="bank-main">
+
+
+        <header class="bank-topbar">
+
+
+            <div>
+
+                <p class="bank-eyebrow">
+                    SECURITY
+                </p>
+
+                <h1>
+                    Verification
+                </h1>
+
+            </div>
+
+
+            <div class="bank-user">
+
+                <div>
+
+                    <strong>
+                        Sandra Conner
+                    </strong>
+
+                    <small>
+                        Account Holder
+                    </small>
+
+                </div>
+
+
+                <div class="bank-avatar">
+                    SC
+                </div>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- VERIFICATION CARD -->
+
+        <section class="verification-layout">
+
+
+            <div class="verification-card">
+
+
+                <div class="verification-symbol">
+                    ✓
+                </div>
+
+
+                <p class="bank-eyebrow">
+                    SECURITY CHECK
+                </p>
+
+
+                <h2>
+                    Verification required
+                </h2>
+
+
+                <p class="verification-text">
+                    Your request requires an additional
+                    security check before it can continue.
+                </p>
+
+
+                <div class="verification-status">
+
+
+                    <div class="status-line">
+
+                        <span class="status-check">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Request received
+                            </strong>
+
+                            <small>
+                                Your request has been recorded.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="status-line">
+
+                        <span class="status-pending">
+                            •
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Security verification
+                            </strong>
+
+                            <small>
+                                Additional verification is required.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="status-line">
+
+                        <span class="status-waiting">
+                            •
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Processing
+                            </strong>
+
+                            <small>
+                                Processing will continue after verification.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="verification-actions">
+
+
+                    <button
+                        type="button"
+                        id="continueVerification"
+                        class="bank-primary-button">
+
+                        Continue
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <a
+                        href="dashboard.html"
+                        class="bank-secondary-button">
+
+                        Return to Dashboard
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <aside class="verification-side">
+
+
+                <div class="side-info-card">
+
+
+                    <div class="side-icon">
+                        ◆
+                    </div>
+
+
+                    <p class="bank-eyebrow">
+                        SECURITY
+                    </p>
+
+
+                    <h3>
+                        Keep your account protected
+                    </h3>
+
+
+                    <p>
+                        Never share passwords, authentication
+                        codes or other security credentials with
+                        another person.
+                    </p>
+
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+
+        <footer class="bank-footer">
+
+            <span>
+                Internet Banking
+            </span>
+
+
+            <span>
+                Account ending 4821
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+const continueVerification =
+    document.getElementById(
+        "continueVerification"
+    );
+
+
+continueVerification.addEventListener(
+    "click",
+    function () {
+
+        window.location.href =
+            "result.html";
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

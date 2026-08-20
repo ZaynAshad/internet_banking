@@ -1,0 +1,4390 @@
+/* =========================================================
+   INTERNET BANKING
+   COMPLETE SITE STYLES
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+
+    --navy: #061a33;
+    --navy-light: #0d3158;
+
+    --blue: #1769e0;
+    --blue-dark: #0d4fae;
+
+    --text: #172033;
+    --muted: #718096;
+
+    --border: #dfe5ec;
+
+    --white: #ffffff;
+
+    --background: #f5f7fb;
+
+    --green: #17834e;
+
+    --red: #c53d4b;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.bank-login {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(420px, 1.15fr)
+        minmax(430px, .85fr);
+
+}
+
+
+.login-image {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(44,128,230,.30),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 85%,
+            rgba(24,105,224,.20),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #031326 0%,
+            #071f3c 45%,
+            #0b3764 100%
+        );
+
+}
+
+
+.login-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .12;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.18) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.18) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+}
+
+
+.login-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+
+    height: 620px;
+
+    right: -280px;
+
+    bottom: -260px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    box-shadow:
+        0 0 0 90px rgba(255,255,255,.025),
+        0 0 0 180px rgba(255,255,255,.018);
+
+}
+
+
+.image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(3,18,37,.30),
+            rgba(4,30,58,.08)
+        );
+
+}
+
+
+.image-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 100%;
+
+    padding: 48px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    color: white;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.brand::before {
+
+    content: "";
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2c82e8,
+            #0d4fae
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.25);
+
+}
+
+
+.brand span {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    opacity: .65;
+
+    margin-top: 4px;
+
+}
+
+
+.image-text {
+
+    max-width: 570px;
+
+    padding-bottom: 50px;
+
+}
+
+
+.eyebrow {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 14px;
+
+    color: #78aef5;
+
+}
+
+
+.image-text h1 {
+
+    font-size:
+        clamp(
+            42px,
+            5vw,
+            72px
+        );
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.image-text p:not(.eyebrow) {
+
+    max-width: 500px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,255,255,.75);
+
+}
+
+
+.login-panel {
+
+    min-height: 100vh;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 45px;
+
+}
+
+
+.login-container {
+
+    width: 100%;
+
+    max-width: 460px;
+
+}
+
+
+.mobile-brand {
+
+    display: none;
+
+    color: var(--navy);
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.mobile-brand span {
+
+    color: var(--blue);
+
+}
+
+
+.login-heading {
+
+    margin-bottom: 38px;
+
+}
+
+
+.login-heading .eyebrow {
+
+    color: var(--blue);
+
+    margin-bottom: 10px;
+
+}
+
+
+.login-heading h2 {
+
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.3px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.login-heading > p:last-child {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 23px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+
+}
+
+
+.password-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.password-header a {
+
+    font-size: 12px;
+
+    color: var(--blue);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+.input-wrapper {
+
+    position: relative;
+
+}
+
+
+.input-wrapper input {
+
+    width: 100%;
+
+    height: 55px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    padding:
+        0
+        78px
+        0
+        46px;
+
+    font-size: 14px;
+
+    color: var(--text);
+
+    background: #fff;
+
+    transition: .2s;
+
+}
+
+
+.input-wrapper input:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(23,105,224,.10);
+
+}
+
+
+.input-icon {
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    font-size: 15px;
+
+    opacity: .55;
+
+}
+
+
+.show-password {
+
+    position: absolute;
+
+    right: 13px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.remember-row {
+
+    margin:
+        4px 0
+        25px;
+
+}
+
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+.remember input {
+
+    width: 16px;
+
+    height: 16px;
+
+    accent-color: var(--blue);
+
+}
+
+
+.login-button {
+
+    width: 100%;
+
+    height: 56px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(23,105,224,.20);
+
+    transition: .2s;
+
+}
+
+
+.login-button:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(23,105,224,.28);
+
+}
+
+
+.login-button span {
+
+    font-size: 20px;
+
+}
+
+
+.security-message {
+
+    margin-top: 32px;
+
+    padding: 16px;
+
+    border:
+        1px solid
+        #e6ebf2;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    gap: 13px;
+
+    background: #fafcff;
+
+}
+
+
+.security-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e8f7ef;
+
+    color: #17834e;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+.security-message strong {
+
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.security-message p {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.login-footer {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        #edf0f4;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #98a2b3;
+
+    font-size: 11px;
+
+}
+
+
+.login-footer div {
+
+    display: flex;
+
+    gap: 18px;
+
+}
+
+
+.login-footer a {
+
+    color: #667085;
+
+}
+
+
+.login-footer a:hover {
+
+    color: var(--blue);
+
+}
+
+
+/* =========================================================
+   BANK APPLICATION
+========================================================= */
+
+.bank-app {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    background: var(--background);
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.bank-sidebar {
+
+    width: 250px;
+
+    min-height: 100vh;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #061a33,
+            #082846
+        );
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    z-index: 20;
+
+}
+
+
+.bank-brand {
+
+    height: 105px;
+
+    padding:
+        28px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.07);
+
+}
+
+
+.bank-logo {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2c82e8,
+            #0d4fae
+        );
+
+    font-size: 15px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0,0,0,.2);
+
+}
+
+
+.bank-brand strong {
+
+    display: block;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.bank-brand span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color:
+        rgba(255,255,255,.55);
+
+}
+
+
+.bank-navigation {
+
+    padding:
+        25px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.bank-navigation a,
+.sidebar-bottom a {
+
+    min-height: 48px;
+
+    padding:
+        0 15px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .2s;
+
+}
+
+
+.bank-navigation a span,
+.sidebar-bottom a span {
+
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 17px;
+
+}
+
+
+.bank-navigation a:hover,
+.sidebar-bottom a:hover {
+
+    background:
+        rgba(255,255,255,.07);
+
+    color: white;
+
+}
+
+
+.bank-navigation a.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(23,105,224,.95),
+            rgba(13,79,174,.95)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0,0,0,.16);
+
+}
+
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+    padding:
+        15px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.07);
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.bank-main {
+
+    width: calc(100% - 250px);
+
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding:
+        0 42px 35px;
+
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.bank-topbar {
+
+    min-height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        #e7ebf0;
+
+    margin-bottom: 28px;
+
+}
+
+
+.bank-eyebrow {
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.bank-topbar h1 {
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+}
+
+
+.bank-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: right;
+
+}
+
+
+.bank-user strong {
+
+    display: block;
+
+    font-size: 13px;
+
+}
+
+
+.bank-user small {
+
+    display: block;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+}
+
+
+.bank-avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1769e0,
+            #0d4fae
+        );
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome-panel {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 170px;
+
+    padding: 32px;
+
+    border-radius: 14px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(76,154,255,.35),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #061a33,
+            #0c3b69
+        );
+
+    margin-bottom: 24px;
+
+}
+
+
+.welcome-panel p {
+
+    color: #78aef5;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.welcome-panel h2 {
+
+    font-size: 30px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.welcome-panel span {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size: 13px;
+
+}
+
+
+.welcome-mark {
+
+    position: absolute;
+
+    right: 50px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    box-shadow:
+        0 0 0 25px
+        rgba(255,255,255,.025),
+        0 0 0 50px
+        rgba(255,255,255,.018);
+
+}
+
+
+/* =========================================================
+   DASHBOARD BALANCE
+========================================================= */
+
+.dashboard-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr;
+
+    gap: 18px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.primary-balance-card {
+
+    min-height: 220px;
+
+    padding: 25px;
+
+    border-radius: 13px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1769e0,
+            #0d4fae
+        );
+
+    box-shadow:
+        0 14px 32px
+        rgba(23,105,224,.18);
+
+}
+
+
+.balance-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color:
+        rgba(255,255,255,.70);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+.balance-amount {
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+
+    margin-top: 29px;
+
+}
+
+
+.balance-account {
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: 11px;
+
+    margin-top: 7px;
+
+}
+
+
+.balance-actions {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+}
+
+
+.balance-actions a {
+
+    padding:
+        9px 14px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(255,255,255,.13);
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.dashboard-stat {
+
+    min-height: 220px;
+
+    padding: 25px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 13px;
+
+}
+
+
+.dashboard-stat > span {
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+.dashboard-stat strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-top: 28px;
+
+    letter-spacing: -1px;
+
+}
+
+
+.dashboard-stat small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 6px;
+
+}
+
+
+.stat-line {
+
+    height: 1px;
+
+    background:
+        #edf0f4;
+
+    margin:
+        25px 0 12px;
+
+}
+
+
+.dashboard-stat p {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.bank-section {
+
+    margin-bottom: 32px;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading p {
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 20px;
+
+    letter-spacing: -.5px;
+
+}
+
+
+.section-heading > a {
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-actions {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.quick-card {
+
+    min-height: 120px;
+
+    padding: 18px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 11px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: .2s;
+
+}
+
+
+.quick-card:hover {
+
+    border-color:
+        rgba(23,105,224,.35);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(20,50,90,.07);
+
+}
+
+
+.quick-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+    font-weight: 800;
+
+}
+
+
+.quick-card strong {
+
+    display: block;
+
+    font-size: 12px;
+
+}
+
+
+.quick-card span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+.quick-card b {
+
+    margin-left: auto;
+
+    color: var(--blue);
+
+}
+
+
+/* =========================================================
+   RECENT TRANSACTIONS
+========================================================= */
+
+.transaction-card {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+.transaction-row {
+
+    min-height: 75px;
+
+    padding:
+        12px 18px;
+
+    display: grid;
+
+    grid-template-columns:
+        38px
+        1fr
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.transaction-row:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.transaction-icon {
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 800;
+
+}
+
+
+.credit-icon {
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+}
+
+
+.debit-icon {
+
+    background: #fff0f1;
+
+    color: var(--red);
+
+}
+
+
+.transaction-description strong {
+
+    display: block;
+
+    font-size: 12px;
+
+}
+
+
+.transaction-description span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 3px;
+
+}
+
+
+.transaction-amount {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.credit {
+
+    color: var(--green);
+
+}
+
+
+.debit {
+
+    color: var(--red);
+
+}
+
+
+.transaction-status {
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   ACCOUNTS
+========================================================= */
+
+.account-total {
+
+    min-height: 165px;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #061a33,
+            #0c3b69
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+
+.account-total p {
+
+    color: #78aef5;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+}
+
+
+.account-total h2 {
+
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+
+    margin:
+        10px 0 5px;
+
+}
+
+
+.account-total span {
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: 11px;
+
+}
+
+
+.account-total-mark {
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+}
+
+
+.account-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 16px;
+
+}
+
+
+.account-card {
+
+    padding: 23px;
+
+    min-height: 245px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    background: white;
+
+}
+
+
+.account-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+.account-type {
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.account-card-logo {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 8px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+}
+
+
+.account-card h3 {
+
+    font-size: 17px;
+
+    margin-top: 22px;
+
+}
+
+
+.account-number {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 6px;
+
+}
+
+
+.account-balance {
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-top: 27px;
+
+}
+
+
+.account-label {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+.account-card-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top:
+        1px solid
+        #edf0f4;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    font-size: 10px;
+
+}
+
+
+.account-card-footer span {
+
+    color: var(--green);
+
+    font-weight: 700;
+
+}
+
+
+.account-card-footer a {
+
+    color: var(--blue);
+
+    font-weight: 700;
+
+}
+
+
+.details-card {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+.detail-item {
+
+    padding: 20px;
+
+    border-right:
+        1px solid
+        #edf0f4;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.detail-item span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.detail-item strong {
+
+    font-size: 12px;
+
+}
+
+
+.active-text {
+
+    color: var(--green) !important;
+
+}
+
+
+.currency-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 10px;
+
+}
+
+
+.currency-card {
+
+    padding: 17px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 9px;
+
+}
+
+
+.currency-card strong {
+
+    display: block;
+
+    font-size: 13px;
+
+}
+
+
+.currency-card span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================================================
+   FORM PAGES
+========================================================= */
+
+.transfer-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        300px;
+
+    gap: 20px;
+
+}
+
+
+.transfer-form-card {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 13px;
+
+    padding: 28px;
+
+}
+
+
+.form-card-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 23px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+    margin-bottom: 25px;
+
+}
+
+
+.form-card-heading p,
+.profile-card-heading p,
+.settings-heading p {
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.form-card-heading h2,
+.profile-card-heading h2,
+.settings-heading h2 {
+
+    font-size: 21px;
+
+}
+
+
+.form-heading-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 10px;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+.bank-form-section {
+
+    padding-bottom: 25px;
+
+    margin-bottom: 25px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.bank-form-section:last-of-type {
+
+    border-bottom: 0;
+
+}
+
+
+.bank-form-title {
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    margin-bottom: 17px;
+
+}
+
+
+.bank-field {
+
+    margin-bottom: 17px;
+
+}
+
+
+.bank-field:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.bank-field label {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+}
+
+
+.bank-field input,
+.bank-field select {
+
+    width: 100%;
+
+    height: 48px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    padding:
+        0 13px;
+
+    outline: none;
+
+    background: white;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    transition: .2s;
+
+}
+
+
+.bank-field input:focus,
+.bank-field select:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(23,105,224,.08);
+
+}
+
+
+.two-fields {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+}
+
+
+.transfer-actions,
+.profile-actions,
+.settings-actions,
+.result-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 8px;
+
+}
+
+
+.bank-primary-button,
+.bank-secondary-button {
+
+    min-height: 48px;
+
+    padding:
+        0 20px;
+
+    border-radius: 8px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+}
+
+
+.bank-primary-button {
+
+    border: 0;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(23,105,224,.17);
+
+}
+
+
+.bank-primary-button span {
+
+    font-size: 17px;
+
+}
+
+
+.bank-secondary-button {
+
+    border:
+        1px solid
+        var(--border);
+
+    background: white;
+
+    color: var(--text);
+
+}
+
+
+.transfer-side {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.side-info-card {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    padding: 23px;
+
+}
+
+
+.side-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+    margin-bottom: 20px;
+
+}
+
+
+.side-info-card h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.side-info-card p:not(.bank-eyebrow) {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+.side-balance {
+
+    display: block;
+
+    font-size: 23px;
+
+    margin-top: 18px;
+
+}
+
+
+.side-info-card > span {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   TRANSACTIONS
+========================================================= */
+
+.transaction-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.transaction-summary-card {
+
+    padding: 22px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 11px;
+
+}
+
+
+.transaction-summary-card span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+.transaction-summary-card strong {
+
+    display: block;
+
+    font-size: 22px;
+
+    margin-top: 15px;
+
+}
+
+
+.transaction-summary-card small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+.credit-text {
+
+    color: var(--green) !important;
+
+}
+
+
+.debit-text {
+
+    color: var(--red) !important;
+
+}
+
+
+.transaction-controls {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        150px
+        130px;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.transaction-search {
+
+    position: relative;
+
+}
+
+
+.transaction-search span {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: var(--muted);
+
+}
+
+
+.transaction-search input,
+.transaction-controls select {
+
+    width: 100%;
+
+    height: 45px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    background: white;
+
+    outline: none;
+
+    padding:
+        0 13px;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+}
+
+
+.transaction-search input {
+
+    padding-left: 38px;
+
+}
+
+
+.transaction-search input:focus,
+.transaction-controls select:focus {
+
+    border-color: var(--blue);
+
+}
+
+
+.transaction-table-card {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+.transaction-table-header {
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.transaction-table-header p {
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.transaction-table-header h2 {
+
+    font-size: 19px;
+
+}
+
+
+.transaction-table-header > span {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+.transaction-table-wrap {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.transaction-table-wrap table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+
+}
+
+
+.transaction-table-wrap th {
+
+    text-align: left;
+
+    padding:
+        14px 17px;
+
+    color: #98a2b3;
+
+    background: #fafbfc;
+
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.transaction-table-wrap td {
+
+    padding:
+        17px;
+
+    border-top:
+        1px solid
+        #edf0f4;
+
+    font-size: 11px;
+
+}
+
+
+.transaction-table-wrap td strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.transaction-table-wrap td small {
+
+    display: block;
+
+    color: var(--muted);
+
+    margin-top: 4px;
+
+    font-size: 9px;
+
+}
+
+
+.type-badge,
+.status-badge {
+
+    display: inline-flex;
+
+    padding:
+        5px 8px;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+}
+
+
+.credit-badge {
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+}
+
+
+.debit-badge {
+
+    background: #fff0f1;
+
+    color: var(--red);
+
+}
+
+
+.status-badge {
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-header-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 13px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.large-profile-avatar {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 16px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+.profile-header-info {
+
+    flex: 1;
+
+}
+
+
+.profile-header-info h2 {
+
+    font-size: 24px;
+
+    letter-spacing: -.7px;
+
+}
+
+
+.profile-header-info > span {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+.profile-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+}
+
+
+.profile-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.profile-card {
+
+    padding: 26px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+}
+
+
+.profile-card-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.profile-fields {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+
+}
+
+
+.full-field {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.account-detail-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.account-detail-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        14px 0;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.account-detail-row:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.account-detail-row span {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+.account-detail-row strong {
+
+    text-align: right;
+
+    font-size: 11px;
+
+}
+
+
+.security-card {
+
+    margin-bottom: 18px;
+
+}
+
+
+.security-options {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.security-option {
+
+    min-height: 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        38px 1fr auto;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.security-option:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.security-option-icon {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 8px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.security-option strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.security-option span:not(.security-enabled) {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-top: 3px;
+
+}
+
+
+.security-enabled {
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.settings-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+.settings-card {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+}
+
+
+.settings-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 19px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.settings-heading h2 {
+
+    font-size: 20px;
+
+}
+
+
+.settings-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 9px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+}
+
+
+.settings-fields {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.settings-option-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.settings-option {
+
+    min-height: 75px;
+
+    display: grid;
+
+    grid-template-columns:
+        35px 1fr auto;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.settings-option:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.settings-option-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 8px;
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 10px;
+
+}
+
+
+.settings-option strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.settings-option span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-top: 3px;
+
+}
+
+
+/* switch */
+
+.switch {
+
+    position: relative;
+
+    width: 40px;
+
+    height: 22px;
+
+}
+
+
+.switch input {
+
+    opacity: 0;
+
+    width: 0;
+
+    height: 0;
+
+}
+
+
+.slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #cbd5e1;
+
+    border-radius: 20px;
+
+    transition: .2s;
+
+}
+
+
+.slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 16px;
+
+    height: 16px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: .2s;
+
+}
+
+
+.switch input:checked + .slider {
+
+    background: var(--blue);
+
+}
+
+
+.switch input:checked + .slider::before {
+
+    transform:
+        translateX(18px);
+
+}
+
+
+/* =========================================================
+   VERIFICATION
+========================================================= */
+
+.verification-layout,
+.result-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        300px;
+
+    gap: 18px;
+
+}
+
+
+.verification-card,
+.result-card {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 13px;
+
+    padding: 40px;
+
+}
+
+
+.verification-symbol,
+.result-success-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+
+}
+
+
+.verification-card h2,
+.result-card h2 {
+
+    font-size: 27px;
+
+    letter-spacing: -.8px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.verification-text,
+.result-description {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    max-width: 620px;
+
+}
+
+
+.verification-status {
+
+    margin:
+        30px 0;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.status-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 72px;
+
+    padding:
+        12px 18px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.status-line:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.status-check,
+.status-pending,
+.status-waiting {
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.status-check {
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+}
+
+
+.status-pending {
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+}
+
+
+.status-waiting {
+
+    background: #f1f3f6;
+
+    color: #98a2b3;
+
+}
+
+
+.status-line strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.status-line small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.result-reference {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+.result-reference > div {
+
+    padding: 15px;
+
+    background: #fafbfc;
+
+    border:
+        1px solid
+        #edf0f4;
+
+    border-radius: 8px;
+
+}
+
+
+.result-reference span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.result-reference strong {
+
+    font-size: 11px;
+
+}
+
+
+.result-timeline {
+
+    margin:
+        25px 0;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 10px;
+
+}
+
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns:
+        34px 1fr;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding:
+        15px;
+
+    border-bottom:
+        1px solid
+        #edf0f4;
+
+}
+
+
+.timeline-item:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.timeline-icon {
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 10px;
+
+}
+
+
+.timeline-icon.completed {
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+}
+
+
+.timeline-icon.waiting {
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+}
+
+
+.timeline-item strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.timeline-item span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(23,105,224,.10),
+            transparent 30%
+        ),
+        var(--background);
+
+}
+
+
+.logout-card {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 42px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px
+        rgba(20,45,80,.08);
+
+}
+
+
+.logout-brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.logout-logo {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+
+}
+
+
+.logout-brand strong {
+
+    display: block;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.logout-brand span {
+
+    display: block;
+
+    text-align: left;
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.logout-success-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin:
+        0 auto 24px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #e8f7ef;
+
+    color: var(--green);
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+}
+
+
+.logout-card h1 {
+
+    font-size: 28px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.logout-description {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+.logout-account {
+
+    margin:
+        25px 0;
+
+    padding: 18px;
+
+    background: #fafbfc;
+
+    border:
+        1px solid
+        #edf0f4;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    gap: 20px;
+
+}
+
+
+.logout-account span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.logout-account strong {
+
+    font-size: 11px;
+
+}
+
+
+.logout-button {
+
+    width: 100%;
+
+}
+
+
+.logout-footer {
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        #edf0f4;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #98a2b3;
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.bank-footer {
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        #e4e8ee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #98a2b3;
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .dashboard-cards {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .primary-balance-card {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .quick-actions {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .account-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .details-card {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .currency-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .bank-login {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .login-image {
+
+        display: none;
+
+    }
+
+
+    .login-panel {
+
+        min-height: 100vh;
+
+        padding:
+            30px 25px;
+
+    }
+
+
+    .mobile-brand {
+
+        display: block;
+
+    }
+
+
+    .bank-sidebar {
+
+        width: 210px;
+
+    }
+
+
+    .bank-main {
+
+        width:
+            calc(100% - 210px);
+
+        margin-left: 210px;
+
+        padding:
+            0 25px 30px;
+
+    }
+
+
+    .transfer-layout,
+    .verification-layout,
+    .result-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .transfer-side {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .profile-layout,
+    .settings-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .bank-sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+
+    }
+
+
+    .bank-app {
+
+        display: block;
+
+    }
+
+
+    .bank-navigation {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .sidebar-bottom {
+
+        display: none;
+
+    }
+
+
+    .bank-main {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding:
+            0 15px 25px;
+
+    }
+
+
+    .bank-topbar {
+
+        min-height: 90px;
+
+    }
+
+
+    .bank-topbar h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .bank-user > div:first-child {
+
+        display: none;
+
+    }
+
+
+    .dashboard-cards,
+    .account-grid,
+    .transaction-summary,
+    .result-reference {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .primary-balance-card {
+
+        grid-column: auto;
+
+    }
+
+
+    .quick-actions {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .details-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .currency-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .transfer-side {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .two-fields {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .transaction-controls {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .transaction-table-header {
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+
+    }
+
+
+    .transaction-row {
+
+        grid-template-columns:
+            38px 1fr;
+
+    }
+
+
+    .transaction-amount,
+    .transaction-status {
+
+        grid-column: 2;
+
+    }
+
+
+    .profile-header-card {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .profile-fields {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .full-field {
+
+        grid-column: auto;
+
+    }
+
+
+    .security-option {
+
+        grid-template-columns:
+            35px 1fr;
+
+        padding:
+            10px 0;
+
+    }
+
+
+    .security-enabled {
+
+        grid-column: 2;
+
+    }
+
+
+    .verification-card,
+    .result-card {
+
+        padding: 25px;
+
+    }
+
+
+    .logout-card {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .logout-account {
+
+        flex-direction: column;
+
+    }
+
+
+    .bank-footer,
+    .logout-footer {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .login-panel {
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    .login-container {
+
+        max-width: 100%;
+
+    }
+
+
+    .login-heading h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .login-footer {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: flex-start;
+
+    }
+
+}
